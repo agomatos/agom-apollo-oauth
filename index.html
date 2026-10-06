@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow">
+  <title>AGOM Apollo OAuth</title>
+</head>
+<body>
+  <h1>AGOM Apollo</h1>
+  <p id="status">Callback OAuth ativo.</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.has("code")) {
+      document.getElementById("status").textContent =
+        "Autorização recebida. Você já pode voltar ao processo de configuração do Apollo.";
+    }
+  </script>
+</body>
+</html>
